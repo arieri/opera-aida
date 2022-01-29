@@ -1,0 +1,384 @@
+body {
+  padding: 0;
+  margin: 0;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+$font-especial: "swear-display", serif;
+$font-alt: "bebas-neue", sans-serif;
+
+$landscape: 480px;
+$mobile-s: 375px;
+$mobile-l: 410px;
+$tablet-s: 720px;
+$tablet-l: 1024px;
+$desktop-s: 1200px;
+$desktop-m: 1366px;
+$desktop-l: 1440px;
+$desktop-xl: 1600px;
+
+.landing {
+  position: relative;
+
+  * {
+    box-sizing: border-box;
+  }
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6,
+  p {
+    margin: 0;
+  }
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    font-weight: 800;
+    font-family: $font-especial;
+  }
+
+  h1 {
+    font-size: 3.75em;
+    line-height: 1;
+    width: 80%;
+  }
+
+  h6 {
+    font-weight: 400;
+    text-transform: uppercase;
+    font-size: 1.25em;
+    letter-spacing: 0.015em;
+  }
+
+  p {
+    font-family: var(--main-font-regular-text);
+    font-size: 1.1875em;
+    line-height: 1.35;
+
+    @media (min-width: $desktop-l) {
+      font-size: 20px;
+    }
+    strong {
+      font-weight: normal;
+      font-family: var(--main-font-bold);
+    }
+
+    em {
+      font-style: normal;
+      font-family: var(--main-font-regular-text-it);
+    }
+  }
+
+  &__top {
+    position: sticky;
+    top: 0;
+    width: 100%;
+    height: 60px;
+    background-color: black;
+    z-index: 99;
+  }
+}
+
+.contenedor {
+  width: 90%;
+  max-width: 1080px;
+  margin: 0 auto;
+}
+
+.l--dark {
+  background-color: black;
+  color: #fff;
+}
+
+.l--fullheigth {
+  height: 100vh;
+}
+
+.l--center {
+  text-align: center;
+}
+
+.c--contenedor {
+  width: 100%;
+  max-width: 1256px;
+  margin: 0 auto;
+}
+
+section {
+  position: relative;
+  padding: 15vh 0;
+
+  @media (min-width: $desktop-s) {
+    padding: 10vw 0;
+  }
+
+  .titulo {
+    font-size: 30px;
+    margin-bottom: 30px;
+    font-weight: 600;
+    line-height: 0.9;
+
+    @media (min-width: $tablet-s) {
+      margin-bottom: 60px;
+      font-size: 36px;
+    }
+  }
+
+  .titulo--detalle {
+    font-family: "bebas-neue";
+    letter-spacing: 0.25em;
+    font-size: 24px;
+    font-weight: normal !important;
+
+    @media (min-width: $desktop-s) {
+      font-size: 30px;
+    }
+    @media (min-width: $desktop-xl) {
+      font-size: 36px;
+    }
+
+    &::after {
+      position: absolute;
+      display: block;
+      content: "";
+      height: 90px;
+      width: 1px;
+      left: calc(50% - 1px);
+      bottom: -120px;
+      background-color: #fff;
+      opacity: 0.25;
+    }
+
+    span {
+      display: block;
+      padding: 18px 0 0 0;
+      font-size: 15px;
+      opacity: 0.5;
+      letter-spacing: 0.18em;
+    }
+  }
+}
+
+.contenido {
+  width: 90%;
+  max-width: 1400px;
+  margin: 0 auto;
+
+  .columna {
+    width: 100%;
+
+    &--iframe {
+      padding-top: 10vh;
+
+      @media (min-width: $desktop-s) {
+        padding-top: 0;
+      }
+    }
+  }
+
+  h1 {
+    // position: sticky;
+    top: 100px;
+    display: block;
+    margin: 0;
+    width: 100%;
+    text-align: center;
+    font-weight: 600;
+    line-height: 0.9;
+    padding-top: 20px;
+
+    @media (min-width: $desktop-s) {
+      padding-top: 70px;
+    }
+  }
+
+  .titulo--detalle {
+    @media (min-width: $desktop-s) {
+      transform: translateY(90px);
+    }
+  }
+}
+
+.fila {
+  display: block;
+  padding: 20vh 0;
+  position: relative;
+
+  @media (min-width: $tablet-l) {
+    display: flex;
+  }
+}
+
+.columna {
+  width: calc(100% - 40px);
+
+  @media (min-width: $tablet-s) {
+    width: 100%;
+  }
+
+  &--center {
+    margin: 0 auto;
+    max-width: 600px;
+
+    @media (min-width: $desktop-xl) {
+      max-width: 700px;
+    }
+  }
+
+  &--wide {
+    max-width: 820px;
+    @media (min-width: $desktop-xl) {
+      max-width: 960px;
+    }
+  }
+
+  h2 {
+    font-size: 29px;
+
+    @media (min-width: $desktop-xl) {
+      font-size: 32px;
+    }
+  }
+
+  h3 {
+    font-style: italic;
+    font-weight: 500;
+    font-size: 24px;
+    opacity: 0.7;
+  }
+
+  p {
+    margin: 20px 0;
+    // width: 80%;
+  }
+}
+
+.sticky {
+  @media (min-width: $desktop-s) {
+    position: sticky;
+    top: 150px;
+  }
+
+  &--foto {
+    top: 10vh;
+  }
+}
+
+.espacio {
+  height: 5vh;
+
+  @media (min-width: $desktop-s) {
+    height: 25vh;
+  }
+}
+
+.audios {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  height: 100px;
+  z-index: 999;
+  background-color: rgba($color: #000000, $alpha: 0.8);
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.pad-bot-none {
+  @media (min-width: $desktop-s) {
+    padding-bottom: 0;
+  }
+}
+.pad-top-half {
+  @media (min-width: $desktop-s) {
+    padding-top: 5vw;
+  }
+}
+
+.intro {
+  display: flex;
+  flex-direction: column-reverse;
+
+  @media (min-width: $desktop-s) {
+    display: block;
+  }
+}
+
+.landing {
+  &__slider {
+    width: 100%;
+    height: 180px;
+    margin: 0 0 0 0;
+    overflow-x: scroll;
+    overflow-y: hidden;
+    -webkit-overflow-scrolling: touch;
+
+    @media (min-width: $desktop-s) {
+      height: fit-content;
+    }
+
+    @media (min-width: $desktop-s) {
+      height: 360px;
+      overflow: hidden;
+    }
+
+    @media (min-width: $desktop-m) {
+      height: 450px;
+    }
+
+    @media (min-width: $desktop-l) {
+      height: 500px;
+    }
+
+    &::-webkit-scrollbar {
+      width: 4px;
+      height: 4px;
+    }
+
+    &::-webkit-scrollbar-track {
+      background: rgba($color: #000, $alpha: 0);
+    }
+
+    &::-webkit-scrollbar-thumb {
+      background: rgba($color: #000, $alpha: 0);
+    }
+
+    &__container {
+      width: fit-content;
+      display: flex;
+      margin: 0;
+      padding: 0;
+      position: relative;
+
+      @media (min-width: $desktop-s) {
+        flex-wrap: wrap;
+      }
+
+      li {
+        width: 236px;
+        list-style: none;
+        margin: 0 2px;
+        padding: 0;
+        box-sizing: border-box;
+
+        @media (min-width: $desktop-s) {
+          width: 20%;
+          margin: 0;
+          padding: 0;
+        }
+
+        img {
+          width: 100%;
+          margin: 0;
+          display: block;
+        }
+      }
+    }
+  }
+}

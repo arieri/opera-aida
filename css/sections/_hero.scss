@@ -1,0 +1,162 @@
+.hero {
+  background-color: black;
+  color: #fff;
+  padding: 0;
+
+  &__info {
+    padding: 0vw 0 120px 0;
+
+    @media (min-width: $desktop-s) {
+      // min-height: 700px;
+      padding: 0vw 0 20vh 0;
+    }
+  }
+
+  .hero__image {
+    height: 100vh;
+    padding: 0;
+    background: url("https://clarin.com/redaccionfiler/clarin/desarrollo/2022/espectaculos/opera/aida/images/aida-mobile.png")
+      0% 0% / contain no-repeat;
+
+    // @media (min-width: $tablet-s) {
+    //   background-size: 150%;
+    // }
+    @media (min-width: $tablet-l) {
+      min-height: 720px;
+      background-position: 0 -18vh;
+    }
+    @media (min-width: $desktop-s) {
+      background: url("https://clarin.com/redaccionfiler/clarin/desarrollo/2022/espectaculos/opera/aida/images/aida.png");
+      height: 120vh;
+      min-height: 800px;
+    }
+    @media (min-width: $desktop-l) {
+      min-height: 900px;
+    }
+  }
+
+  h6 {
+    margin-bottom: 50px;
+  }
+
+  h1.hero__title {
+    margin: 0 auto 5vw auto;
+    letter-spacing: 0.015em;
+    width: 100%;
+    font-size: 36px;
+    font-weight: 700 !important;
+
+    @media (min-width: $tablet-s) {
+      margin: 20px auto 5vw auto;
+      font-size: 48px;
+      width: 90%;
+    }
+    @media (min-width: $tablet-l) {
+      font-size: 2.8em;
+    }
+    @media (min-width: $desktop-xl) {
+      font-size: 60px;
+    }
+  }
+
+  p.bajada {
+    font-family: $font-especial;
+    font-weight: 400;
+    font-size: 24px;
+    letter-spacing: 0.015em;
+    padding: 20px 0;
+    margin: 0 auto;
+
+    width: 90%;
+
+    @media (min-width: $tablet-s) {
+      font-size: 22px;
+    }
+    @media (min-width: $desktop-s) {
+      width: 75%;
+    }
+    @media (min-width: $desktop-xl) {
+      font-size: 25px;
+    }
+  }
+
+  .contenedor {
+    max-width: 800px;
+    @media (min-width: $desktop-xl) {
+      max-width: 1080px;
+    }
+  }
+}
+
+.especial__shareo {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  z-index: 2;
+  padding: 180px 0 0 0;
+  margin: 0 auto;
+  text-align: center;
+
+  ul {
+    margin: 30px auto;
+    padding: 0;
+
+    @media (min-width: $landscape) {
+      margin: 60px auto;
+    }
+
+    li {
+      display: inline-block;
+      margin: 0 4px;
+      vertical-align: middle;
+
+      a {
+        width: 48px;
+        height: 48px;
+        border-radius: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        transition: 0.35s;
+
+        &:hover {
+          transition: 0.35s;
+        }
+      }
+    }
+  }
+
+  .share {
+    &-facebook {
+      background: #333
+        url("https://clarin.com/redaccionfiler/clarin/desarrollo/2022/espectaculos/opera/aida/images/icon-facebook.svg")
+        center center no-repeat;
+    }
+
+    &-facebook:hover {
+      background-color: #3b5998;
+    }
+
+    &-twitter {
+      background: #333
+        url("https://clarin.com/redaccionfiler/clarin/desarrollo/2022/espectaculos/opera/aida/images/icon-twitter.svg")
+        center center no-repeat;
+    }
+
+    &-twitter:hover {
+      background-color: #00aced;
+    }
+
+    &-whatsapp {
+      background: #333
+        url("https://clarin.com/redaccionfiler/clarin/desarrollo/2022/espectaculos/opera/aida/images/icon-whatsapp.svg")
+        center center no-repeat;
+    }
+
+    &-whatsapp:hover {
+      background-color: #25d366;
+    }
+  }
+}

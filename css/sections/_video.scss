@@ -1,0 +1,226 @@
+.videoespecial {
+  padding: 0;
+
+  .videoespecial__data {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: start;
+    cursor: pointer;
+
+    &:hover {
+      h2,
+      span {
+        transform: translateX(10px);
+      }
+
+      img {
+        transform: scale(0.9);
+        transition: 0.35s;
+      }
+    }
+
+    h2 {
+      font-size: 32px;
+      font-weight: 600;
+      margin-bottom: 10px;
+      transition: 0.35s;
+      line-height: 1;
+      letter-spacing: -0.015em;
+
+      @media (min-width: $desktop-s) {
+        font-size: 54px;
+      }
+    }
+
+    span {
+      font-family: $font-especial;
+      font-size: 22px;
+      font-weight: 400;
+      line-height: 1.15;
+      font-style: italic;
+      letter-spacing: 0em;
+      margin-bottom: 20px;
+      transition: 0.35s;
+      max-width: 400px;
+      display: block;
+      text-align: left;
+      opacity: 0.8;
+
+      @media (min-width: $desktop-s) {
+        font-size: 24px;
+      }
+    }
+
+    img {
+      transform: scale(0.75);
+      transform-origin: 0;
+      transition: 0.35s;
+    }
+  }
+
+  .fullfoto {
+    background: url("https://clarin.com/redaccionfiler/clarin/desarrollo/2022/espectaculos/opera/aida/images/video.jpg")
+      center center/ cover no-repeat;
+    height: 60vh;
+    min-height: auto;
+    padding: 20px 0;
+
+    background-size: 170%;
+    background-position: bottom;
+
+    &::after {
+      position: absolute;
+      display: block;
+      content: "";
+      width: 100%;
+      top: 0;
+      height: 75%;
+      background: linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 1) 100%);
+      z-index: 1;
+    }
+
+    @media (min-width: $desktop-s) {
+      display: block;
+      height: 100vh;
+      min-height: 720px;
+      padding: 90px 0;
+
+      background-size: cover;
+      background-position: center center;
+    }
+
+    &__info {
+      max-width: 1400px;
+      width: 90%;
+      height: 100%;
+      position: relative;
+    }
+
+    &::after {
+      display: block;
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      z-index: 1;
+      width: 100%;
+      height: 100%;
+      background-color: rgba($color: #000000, $alpha: 0.5);
+      opacity: 0.8;
+
+      @media (min-width: $desktop-s) {
+        opacity: 1;
+      }
+    }
+  }
+}
+
+.videomodal {
+  position: fixed !important;
+  top: 0;
+  left: 0;
+  overflow: hidden;
+  z-index: 9998;
+  width: 100%;
+  opacity: 0;
+  height: 100%;
+  background: rgba($color: #000000, $alpha: 0.99);
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  transform: translateX(100%);
+  transition: all 0.6s cubic-bezier(0.79, 0.01, 0.08, 1);
+
+  @media (min-width: 480px) {
+    height: 100vh;
+  }
+
+  &__close {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-sizing: border-box;
+    position: fixed;
+    left: auto;
+    top: 30px;
+    right: 15px;
+    z-index: 9999;
+    width: 48px;
+    height: 48px;
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 700;
+    background: #333
+      url("https://clarin.com/redaccionfiler/clarin/desarrollo/2020/policiales/escenas/media/icon-close.svg") center
+      center no-repeat;
+    background-size: 16px;
+    border-radius: 99px;
+    transition: 0.35s;
+    cursor: pointer;
+
+    &:hover {
+      background-color: #666;
+      border: 0 solid #666;
+    }
+
+    svg {
+      width: 16px;
+      fill: #fff;
+      margin: 0;
+    }
+  }
+
+  &__container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    z-index: 99;
+    height: 100%;
+    margin: 0 auto;
+    background: rgba(0, 0, 0, 0);
+
+    > div {
+      max-width: 1024px;
+      width: 100%;
+      margin: 0 auto;
+      opacity: 0;
+      display: none;
+      transition: opacity 0.25s ease-out;
+
+      &.playing {
+        opacity: 1 !important;
+        transition: opacity 0.25s ease-out;
+        display: block !important;
+      }
+    }
+
+    iframe {
+      max-width: 1013px;
+      max-height: 570px;
+      margin: 0 auto;
+    }
+
+    video {
+      animation-iteration-count: 1;
+      animation-timing-function: ease-in-out;
+      animation-duration: 0.5s;
+      animation-fill-mode: forwards;
+    }
+
+    a {
+      text-decoration: none;
+      color: #fff;
+    }
+  }
+}
+
+// ANIMACIONES
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}

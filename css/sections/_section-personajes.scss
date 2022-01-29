@@ -1,0 +1,126 @@
+.personajes {
+  padding: 10vh 0 0 0;
+
+  @media (min-width: $desktop-s) {
+    padding: 0;
+  }
+
+  h1 {
+    position: relative;
+    top: 20px;
+  }
+  .titulo--detalle::after {
+    display: none;
+
+    @media (min-width: $desktop-s) {
+      display: block;
+    }
+  }
+
+  .espacio {
+    @media (max-width: 420px) {
+      height: 10vh;
+    }
+  }
+  .personaje {
+    // min-height: 150vh;
+    padding: 0 0 20vh 0;
+    @media (min-width: $desktop-s) {
+      padding: 0 0 20vh 0;
+    }
+
+    &--radames {
+      display: flex;
+      flex-direction: column-reverse;
+
+      @media (min-width: $desktop-s) {
+        flex-direction: flex;
+        flex-direction: row;
+      }
+    }
+
+    &__text {
+      display: flex;
+      flex-direction: column;
+      align-items: self-start;
+      justify-content: center;
+      padding: 0 0px;
+      text-align: center;
+
+      @media (min-width: $desktop-s) {
+        padding: 0 60px;
+        text-align: left;
+      }
+
+      h2 {
+        font-size: 30px;
+        font-weight: 600;
+        width: 100%;
+
+        @media (min-width: $desktop-s) {
+          font-size: 44px;
+        }
+      }
+
+      h3 {
+        margin-bottom: 25px;
+        color: #999;
+        width: 100%;
+
+        font-size: 22px;
+        opacity: 1;
+
+        @media (min-width: $desktop-s) {
+          margin-bottom: 30px;
+          font-size: 24px;
+        }
+      }
+
+      p {
+        width: 90%;
+        margin: 0 auto;
+
+        @media (min-width: $desktop-s) {
+          max-width: 500px;
+          margin: 0;
+        }
+
+        small {
+          display: block;
+          line-height: 1.2;
+          opacity: 0.75;
+          padding-top: 30px;
+          font-size: 16px;
+        }
+      }
+    }
+
+    .sticky--foto {
+      display: flex;
+      justify-content: center;
+      overflow: hidden;
+      position: relative;
+      top: 0;
+
+      img {
+        width: 100%;
+      }
+    }
+  }
+}
+
+.--flip {
+  @media (min-width: $desktop-s) {
+    text-align: right;
+    align-items: flex-end !important;
+  }
+
+  h2,
+  h3,
+  p {
+    @media (min-width: $desktop-s) {
+      text-align: right;
+      width: 90%;
+    }
+  }
+}

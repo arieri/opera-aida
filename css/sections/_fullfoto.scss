@@ -1,0 +1,46 @@
+.fullfoto {
+  width: 100vw;
+  height: 100vh;
+  min-height: 720px;
+  background-color: #000;
+  color: #fff;
+  text-align: center;
+  padding: 15vh 0;
+
+  @media (min-width: $desktop-s) {
+    padding: 10vh 0;
+  }
+
+  position: relative;
+
+  @media (min-width: $tablet-s) {
+    padding: 5vw 0;
+  }
+
+  &__info {
+    position: relative;
+    max-width: 600px;
+    margin: 0 auto;
+    z-index: 2;
+
+    p {
+      width: 90%;
+      margin: 0 auto;
+      font-size: 20px;
+      line-height: 1.3;
+
+      @media (min-width: $tablet-s) {
+        padding: 5vw 0;
+        font-size: 22px;
+      }
+    }
+  }
+
+  &__bg {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    z-index: 1;
+  }
+}

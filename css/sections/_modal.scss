@@ -1,0 +1,102 @@
+.modal {
+  // display: none !important;
+  position: fixed !important;
+  top: 0;
+  left: 0;
+  overflow: hidden;
+  z-index: 99999;
+  width: 100%;
+  opacity: 0;
+  height: 100%;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  // transform: translateX(100%);
+  transition: all 0.6s cubic-bezier(0.79, 0.01, 0.08, 1);
+  pointer-events: none;
+
+  overflow-y: scroll;
+  // opacity: 1;
+  background-color: white;
+
+  &::-webkit-scrollbar {
+    width: 5px;
+  }
+  &::-webkit-scrollbar-track {
+    background: #f1f1f1;
+  }
+  &::-webkit-scrollbar-thumb {
+    background: #000;
+  }
+  &::-webkit-scrollbar-thumb:hover {
+    background: #000;
+  }
+  -webkit-overflow-scrolling: touch;
+}
+
+.modal--autor .contenedor {
+  padding: 5vh 0;
+
+  @media (min-width: $desktop-s) {
+    display: flex;
+  }
+}
+
+.autor {
+  &__foto {
+    top: 80px;
+
+    img {
+      width: 80%;
+      max-width: 240px;
+
+      @media (min-width: $desktop-s) {
+        width: 100%;
+      }
+    }
+  }
+
+  &__text {
+    padding-top: 30px;
+    padding-bottom: 120px;
+
+    @media (min-width: $desktop-s) {
+      padding-left: 60px;
+    }
+  }
+
+  &__close {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    position: fixed;
+    left: auto;
+    top: 30px;
+    right: 15px;
+    z-index: 9999;
+    width: 48px;
+    height: 48px;
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 700;
+    background: #333
+      url("https://clarin.com/redaccionfiler/clarin/desarrollo/2020/policiales/escenas/media/icon-close.svg") center
+      center no-repeat;
+    background-size: 16px;
+    border-radius: 99px;
+    transition: 0.35s;
+    cursor: pointer;
+
+    &:hover {
+      background-color: #666;
+      border: 0 solid #666;
+    }
+
+    svg {
+      width: 16px;
+      fill: #fff;
+      margin: 0;
+    }
+  }
+}

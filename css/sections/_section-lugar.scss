@@ -1,0 +1,26 @@
+.lugar {
+  padding: 0;
+
+  .titulo--detalle::after {
+    display: none;
+  }
+  .fullfoto::after {
+    position: absolute;
+    display: block;
+    content: "";
+    width: 100%;
+    top: 0;
+    height: 75%;
+    z-index: 1;
+    background: linear-gradient(0deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 1) 100%);
+  }
+
+  .fullfoto__info {
+    height: 300vh;
+    z-index: 3;
+  }
+  .fullfoto__bg {
+    background: url("https://clarin.com/redaccionfiler/clarin/desarrollo/2022/espectaculos/opera/aida/images/lugar.jpg")
+      center bottom/cover no-repeat;
+  }
+}
